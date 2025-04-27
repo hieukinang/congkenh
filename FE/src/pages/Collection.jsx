@@ -85,39 +85,96 @@ const Collection = () => {
         </p>
         {/* Category Filter */}
         <div className={`border border-gray-300 pl-5 py-3 my-5 ${showFilter ? '' : 'hidden'} sm:block`}>
-          <p className='mb-3 text-sm font-medium'>CATEGORIES</p>
+          <p className='mb-3 text-sm font-medium'>PRODUCT CATEGORIES</p>
           <div className='flex flex-col gap-2 text-sm font-light text-gray-700'>
             <p className='flex gap-2'>
-              <input className='w-3' type='checkbox' value={'Men'} onChange={toggleCategory}/>Men
+              <input className='w-3' type='checkbox' value={'Lipstick'} onChange={toggleCategory}/>Lipstick
             </p>
 
             <p className='flex gap-2'>
-              <input className='w-3' type='checkbox' value={'Women'} onChange={toggleCategory}/>Women
+              <input className='w-3' type='checkbox' value={'Perfume'} onChange={toggleCategory}/>Perfume
             </p>
 
             <p className='flex gap-2'>
-              <input className='w-3' type='checkbox' value={'Kids'} onChange={toggleCategory}/>Kids
+              <input className='w-3' type='checkbox' value={'Makeup'} onChange={toggleCategory}/>Makeup
+            </p>
+
+            <p className='flex gap-2'>
+              <input className='w-3' type='checkbox' value={'Skincare-Haircare'} onChange={toggleCategory}/>Skincare - Haircare
             </p>
           </div>
         </div>
 
         {/* SubCategory Filter */}
+        {/* Brand Filter */}
         <div className={`border border-gray-300 pl-5 py-3 mt-6 ${showFilter ? '' : 'hidden'} sm:block`}>
-          <p className='mb-3 text-sm font-medium'>TYPE</p>
-          <div className='flex flex-col gap-2 text-sm font-light text-gray-700'>
-            <p className='flex gap-2'>
-              <input className='w-3' type='checkbox' value={'Topwear'} onChange={toggleSubCategory}/>Topwear
+          <p className="mb-3 text-sm font-medium">BRAND</p>
+          <div className="flex flex-col gap-2 text-sm font-light text-gray-700">
+            <p className="flex gap-2">
+              <input className="w-3" type="checkbox" value="Dior" onChange={toggleSubCategory} /> Dior
             </p>
 
-            <p className='flex gap-2'>
-              <input className='w-3' type='checkbox' value={'Bottomwear'} onChange={toggleSubCategory}/>Bottomwear
+            <p className="flex gap-2">
+              <input className="w-3" type="checkbox" value="YSL" onChange={toggleSubCategory} /> YSL
             </p>
 
-            <p className='flex gap-2'>
-              <input className='w-3' type='checkbox' value={'Winterwear'} onChange={toggleSubCategory}/>Winterwear
+            <p className="flex gap-2">
+              <input className="w-3" type="checkbox" value="Christian Dior" onChange={toggleSubCategory} /> Christian Dior
+            </p>
+
+            <p className="flex gap-2">
+              <input className="w-3" type="checkbox" value="MAC" onChange={toggleSubCategory} /> MAC
+            </p>
+
+            <p className="flex gap-2">
+              <input className="w-3" type="checkbox" value="3CE" onChange={toggleSubCategory} /> 3CE
+            </p>
+
+            <p className="flex gap-2">
+              <input className="w-3" type="checkbox" value="Chanel" onChange={toggleSubCategory} /> Chanel
+            </p>
+
+            <p className="flex gap-2">
+              <input className="w-3" type="checkbox" value="Lancome" onChange={toggleSubCategory} /> Lancome
+            </p>
+
+            <p className="flex gap-2">
+              <input className="w-3" type="checkbox" value="Tom Ford" onChange={toggleSubCategory} /> Tom Ford
             </p>
           </div>
         </div>
+
+        {/* Price Range Filter */}
+        <div className={`border border-gray-300 pl-5 py-3 mt-6 ${showFilter ? '' : 'hidden'} sm:block`}>
+          <p className="mb-3 text-sm font-medium">PRICE RANGE</p>
+          <div className="flex flex-col gap-2 text-sm font-light text-gray-700">
+            <p className="flex gap-2">
+              <input className="w-3" type="checkbox" value="Under 100,000 VND" onChange={toggleSubCategory} /> Under 100,000 VND
+            </p>
+
+            <p className="flex gap-2">
+              <input className="w-3" type="checkbox" value="100,000 - 200,000 VND" onChange={toggleSubCategory} /> 100,000 - 200,000 VND
+            </p>
+
+            <p className="flex gap-2">
+              <input className="w-3" type="checkbox" value="200,000 - 300,000 VND" onChange={toggleSubCategory} /> 200,000 - 300,000 VND
+            </p>
+
+            <p className="flex gap-2">
+              <input className="w-3" type="checkbox" value="300,000 - 500,000 VND" onChange={toggleSubCategory} /> 300,000 - 500,000 VND
+            </p>
+
+            <p className="flex gap-2">
+              <input className="w-3" type="checkbox" value="500,000 - 1,000,000 VND" onChange={toggleSubCategory} /> 500,000 - 1,000,000 VND
+            </p>
+
+            <p className="flex gap-2">
+              <input className="w-3" type="checkbox" value="Above 1,000,000 VND" onChange={toggleSubCategory} /> Above 1,000,000 VND
+            </p>
+          </div>
+        </div>
+
+
 
       </div>
       {/** Right Side */}
