@@ -9,7 +9,7 @@ const Footer = () => {
         <div>
           <img src={assets.logo} className="mb-5 w-32" alt="Forever Beauty Logo" />
           <p className="w-full md:w-2/3 text-gray-600 leading-relaxed">
-            Forever Beauty brings you the finest selection of international cosmetics, helping you embrace your beauty with confidence and style. Authentic brands, premium quality, delivered with care.
+            HNT Comestics brings you the finest selection of international cosmetics, helping you embrace your beauty with confidence and style. Authentic brands, premium quality, delivered with care.
           </p>
         </div>
 
