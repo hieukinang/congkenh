@@ -42,7 +42,7 @@ const ShopContextProvider = (props) => {
 
         if (token) {
             try {
-
+                toast.success("Add product successfully")
                 await axios.post(backendUrl + "/api/cart/add", { itemId, size }, { headers: { token } })
 
             } catch (error) {
@@ -154,9 +154,12 @@ const ShopContextProvider = (props) => {
         setToken, token
     }
     return (
-        <ShopContext.Provider value={value}>
-            {props.children}
-        </ShopContext.Provider>
+        <>
+            <ShopContext.Provider value={value}>
+                {props.children}
+            </ShopContext.Provider>
+
+        </>
     )
 }
 
