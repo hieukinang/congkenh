@@ -44,21 +44,15 @@ const Navbar = () => {
       </ul>
 
       <div className='flex items-center gap-6'>
-        <Link to='/collection'>
+        <Link to='/collection' className='relative'>
           <img onClick={() => setShowSearch(true)} src={assets.search_icon} className='w-5 cursor-pointer' alt='' />
         </Link>
-
-        <div className='relative'>
-          <img 
-            onClick={toggleProfileDropdown}
-            className='w-5 cursor-pointer' 
-            src={assets.profile_icon} 
-            alt='' 
-          />
+        <div className='group relative'>
+          <img onClick={() => token ? null : navigate('/login')} className='w-5 cursor-pointer' src={assets.profile_icon} alt='' />
 
           {token && profileDropdownOpen && (
             <div className='absolute right-0 mt-4 w-36 bg-slate-100 text-gray-500 rounded shadow-lg py-3 px-5'>
-             <p className="cursor-pointer hover:text-black" onClick={() => {setProfileDropdownOpen(false); navigate('/profile');}}>My Profile</p>
+              <p className="cursor-pointer hover:text-black" onClick={() => { setProfileDropdownOpen(false); navigate('/profile'); }}>My Profile</p>
               <p className='cursor-pointer hover:text-black' onClick={() => { setProfileDropdownOpen(false); navigate('/order'); }}>Order</p>
               <p className='cursor-pointer hover:text-black' onClick={logout}>Logout</p>
             </div>
@@ -88,7 +82,7 @@ const Navbar = () => {
           <NavLink onClick={() => setVisible(false)} to='/contact' className='py-2 pl-6 border'>CONTACT</NavLink>
         </div>
       </div>
-    </div>
+    </div >
   )
 }
 
